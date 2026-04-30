@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { 
   Home, Building2, CircleDollarSign, Users, MessageCircle, 
-  Bell, FileText, Settings, HelpCircle
+  Bell, FileText, Settings, HelpCircle, CreditCard // Added CreditCard
 } from 'lucide-react';
 
 interface SidebarItemProps {
@@ -40,6 +40,7 @@ export const Sidebar: React.FC = () => {
     { to: '/dashboard/entrepreneur', icon: <Home size={20} />, text: 'Dashboard' },
     { to: '/profile/entrepreneur/' + user.id, icon: <Building2 size={20} />, text: 'My Startup' },
     { to: '/investors', icon: <CircleDollarSign size={20} />, text: 'Find Investors' },
+    { to: '/payments', icon: <CreditCard size={20} />, text: 'Payments' }, // Added Payments
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/documents', icon: <FileText size={20} />, text: 'Documents' },
@@ -49,6 +50,7 @@ export const Sidebar: React.FC = () => {
     { to: '/dashboard/investor', icon: <Home size={20} />, text: 'Dashboard' },
     { to: '/profile/investor/' + user.id, icon: <CircleDollarSign size={20} />, text: 'My Portfolio' },
     { to: '/entrepreneurs', icon: <Users size={20} />, text: 'Find Startups' },
+    { to: '/payments', icon: <CreditCard size={20} />, text: 'Payments' }, // Added Payments
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/deals', icon: <FileText size={20} />, text: 'Deals' },
@@ -79,7 +81,7 @@ export const Sidebar: React.FC = () => {
           
           <div className="mt-8 px-3">
             <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Settings
+              System
             </h3>
             <div className="mt-2 space-y-1">
               {commonItems.map((item, index) => (
@@ -99,10 +101,10 @@ export const Sidebar: React.FC = () => {
             <p className="text-xs text-gray-600">Need assistance?</p>
             <h4 className="text-sm font-medium text-gray-900 mt-1">Contact Support</h4>
             <a 
-              href="mailto:support@businessnexus.com" 
+              href="mailto:support@solifys.com" 
               className="mt-2 inline-flex items-center text-xs font-medium text-primary-600 hover:text-primary-500"
             >
-              support@businessnexus.com
+              support@solifys.com
             </a>
           </div>
         </div>

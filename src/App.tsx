@@ -25,7 +25,8 @@ import { NotificationsPage } from './pages/notifications/NotificationsPage';
 import { DocumentsPage } from './pages/documents/DocumentsPage';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
-import { DealsPage } from './pages/deals/DealsPage';
+import { DealsPage } from './pages/deals/DealsPage'
+import {PaymentsPage} from './pages/payment/PaymentsPage'
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
@@ -95,6 +96,7 @@ function App() {
           
           {/* Catch all other routes and redirect to login */}
           <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="/payments" element={<PaymentsPage />} />
         </Routes>
       </Router>
     </AuthProvider>
