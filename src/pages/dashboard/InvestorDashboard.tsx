@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Users, PieChart, Filter, Search, PlusCircle, CreditCard, Video, X, ArrowRight, Calendar } from 'lucide-react';
+import { Users, PieChart, Filter, Search, PlusCircle, CreditCard, Video, X, ArrowRight, } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Card, CardBody, CardHeader } from '../../components/ui/Card';
 import { Input } from '../../components/ui/Input';
@@ -10,8 +10,7 @@ import { useAuth } from '../../context/AuthContext';
 import { entrepreneurs } from '../../data/users';
 import { getRequestsFromInvestor } from '../../data/collaborationRequests';
 import { MeetingCalendar } from './MeetingCalendar'; // Shared component
-import { VideoCallingSection } from '../../components/collaboration/VideoCallingSection'; // Shared component
-
+import { VideoCalling } from '../../components/collaboration/videoCallingSection';
 export const InvestorDashboard: React.FC = () => {
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
@@ -193,7 +192,7 @@ export const InvestorDashboard: React.FC = () => {
           <div className="w-full max-w-4xl">
              <div className="mb-4 text-center text-white"><h2 className="text-xl font-bold">Solifys Secure Deal Room</h2></div>
              <div className="bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-                <VideoCallingSection onEndCall={() => setIsMeetingActive(false)} />
+                <VideoCalling onEndCall={() => setIsMeetingActive(false)} />
              </div>
           </div>
         </div>

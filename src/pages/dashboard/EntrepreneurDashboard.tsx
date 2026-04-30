@@ -11,7 +11,7 @@ import { CollaborationRequest } from '../../types';
 import { getRequestsForEntrepreneur } from '../../data/collaborationRequests';
 import { investors } from '../../data/users';
 import { MeetingCalendar } from './MeetingCalendar';
-import { VideoCallingSection } from '../../components/collaboration/VideoCallingSection';
+import { VideoCalling } from '../../components/collaboration/videoCallingSection';
 
 export const EntrepreneurDashboard: React.FC = () => {
   const { user } = useAuth();
@@ -179,7 +179,7 @@ export const EntrepreneurDashboard: React.FC = () => {
 
       {/* THE VIDEO BLOCK */}
       <div className="bg-black rounded-3xl overflow-hidden shadow-2xl border border-white/5 ring-1 ring-white/10">
-        <VideoCallingSection onEndCall={() => setIsMeetingActive(false)} />
+        <VideoCalling onEndCall={() => setIsMeetingActive(false)} />
       </div>
       
       <p className="mt-4 text-center text-xs text-gray-500 uppercase tracking-widest">

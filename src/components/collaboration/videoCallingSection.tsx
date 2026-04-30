@@ -6,7 +6,7 @@ import {
 import { Card, CardBody } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 
-export const VideoCallingSection: React.FC = () => {
+export const VideoCalling: React.FC = () => {
   const [isCalling, setIsCalling] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [isCamOff, setIsCamOff] = useState(false);
